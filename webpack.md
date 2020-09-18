@@ -5,13 +5,15 @@ plugins:
 
 <slide  class="bg-black aligncenter" image="https://source.unsplash.com/random .dark">
 
-## 初步学习 [webpack](https://webpack.docschina.org/) {.text-landing.text-shadow}
+## 初学 [webpack](https://webpack.docschina.org/) {.text-landing.text-shadow}
 
 By fy.li {.text-intro}
 
 <slide  class="bg-black aligncenter" image="https://source.unsplash.com/random .dark">
 
-- 防护等级考试 {:&.bounceIn}
+- entry(入口) {:&.bounceIn}
+- output(输出) {:&.bounceIn}
+- loader(转换器) {:&.bounceIn}
+- plugin(插件) {:&.bounceIn}
+- mode(模式) {:&.bounceIn}
 <slide  class="bg-black aligncenter" image="https://source.unsplash.com/random .dark">
-
-
