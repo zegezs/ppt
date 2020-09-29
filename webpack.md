@@ -110,4 +110,42 @@ By fy.li {.text-intro}
 ### mode
 
 #####  通过选择 development, production 或 none 之中的一个，来设置 mode 参数，你可以启用 webpack 内置在相应环境下的优化。其默认值为 production
-<slide class="bg-black" :class=" size-40 aligncenter" image="https://cn.bing.com/az/hprichbg/rb/WinterLynx_ZH-CN7158207296_1920x1080.jpg .dark">
+
+<slide class="bg-apple aligncenter">
+![](./static/image1.jpg)
+:::
+
+
+<slide :class="size-50">
+
+##  :fa-heart-o: Loader
+
+
+* :raw-loader\::{.text-intro}  加载文件内容
+* :file-loader\::{.text-intro} 图片加载，生成file文件，输出到指定目录并返回url
+* :url-loader\::{.text-intro} 基本与file-loader相似，可以设置一个limit值，小于这个值的可以打包成base64位的文件
+* :css-loader\::{.text-intro} 加载 CSS，支持模块化、压缩、文件导入等特性
+* :style-loader\::{.text-intro} 把CSS代码注入到JavaScript中，通过DOM加载CSS
+* :sass-loader\::{.text-intro}  将scss/sass转换为css
+* :babel-loader\::{.text-intro}  将ES6转换为ES5
+{.description}
+
+
+<slide :class="size-50">
+
+##  :fa-heart-o: plugin
+
+
+* :MiniCssExtractPlugin\::{.text-intro}  将css文件单独打包成一个文件
+* :HtmlWebpackPlugin\::{.text-intro} 简单创建 HTML 文件，用于服务器访问
+* :HotModuleReplacementPlugin\::{.text-intro} 启用模块热替换(Enable Hot Module Replacement - HMR)
+* :DllPlugin\::{.text-intro} 为了极大减少构建时间，进行分离打包
+* :DllReferencePlugin\::{.text-intro} 这个插件是在 webpack 主配置文件中设置的， 这个插件把只有 dll 的 bundle(们)(dll-only-bundle(s)) 引用到需要的预编译的依赖。
+* :BundleAnalyzerPlugin\::{.text-intro} 分析打包后bundle的大小
+{.description}
+
+<slide class="bg-apple aligncenter">
+![](./static/image2.jpg)
+
+
+<slide></slide>
