@@ -147,5 +147,7 @@ By fy.li {.text-intro}
 <slide class="bg-apple aligncenter">
 ![](./static/image2.jpg)
 
+<slide class="fullscreen bg-blue" youtube=".dark id='KbNL9ZyB49c' autoplay loop" :class="aligncenter">
 
-<slide></slide>
+## **编写一个loader**
+<!-- <slide youtube=".dark id='_m67JbGjWnc' autoplay loop"> -->
