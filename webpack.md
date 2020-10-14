@@ -149,5 +149,6 @@ By fy.li {.text-intro}
 
 <slide class="fullscreen bg-blue" youtube=".dark id='KbNL9ZyB49c' autoplay loop" :class="aligncenter">
 
-## **编写一个loader**
+## **编写一个[loader](https://www.webpackjs.com/contribute/writing-a-loader/)和[plugin](https://www.webpackjs.com/contribute/writing-a-plugin/)**
+
 <!-- <slide youtube=".dark id='_m67JbGjWnc' autoplay loop"> -->
