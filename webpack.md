@@ -114,6 +114,9 @@ By fy.li {.text-intro}
 <slide class="bg-apple aligncenter">
 ![](./static/image1.jpg)
 :::
+<slide class="bg-apple aligncenter">
+![](./static/menu.jpg)
+:::
 
 
 <slide :class="size-50">
@@ -145,6 +148,26 @@ By fy.li {.text-intro}
 {.description}
 
 <slide class="bg-apple aligncenter">
+![](./static/image1.jpg)
+:::
+
+<slide :class="size-50">
+
+##### Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：
+---
+
+* 初始化参数：从配置文件和 Shell 语句中读取与合并参数，得出最终的参数( 这个过程中还会执行配置文件中的插件实例化语句 new Plugin())
+* 开始编译：用上一步得到的参数初始化 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译
+* 确定入口：根据配置中的 entry 找出所有的入口文件
+* 编译模块：从入口文件出发，调用所有配置的 Loader 对模块进行翻译，再找出该模块依赖的模块，再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理
+* 完成模块编译：在经过第4步使用 Loader 翻译完所有模块后，得到了每个模块被翻译后的最终内容以及它们之间的依赖关系
+* 输出资源：根据入口和模块之间的依赖关系，组装成一个个包含多个模块的 Chunk，再把每个 Chunk 转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会
+* 输出完成：在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统
+---
+在以上过程中，Webpack 会在特定的时间点广播出特定的事件，插件在监听到感兴趣的事件后会执行特定的逻辑，并且插件可以调用 Webpack 提供的 API 改变 Webpack 的运行结果。
+
+
+<slide class="bg-apple aligncenter">
 ![](./static/image2.jpg)
 
 <slide class="fullscreen bg-blue" youtube=".dark id='KbNL9ZyB49c' autoplay loop" :class="aligncenter">
@@ -153,13 +176,12 @@ By fy.li {.text-intro}
 
 <slide :class="size-50">
 
-##  :fa-heart-o: Compiler 和 Compilation
+## Compiler 和 Compilation
 
 在开发 Plugin 时最常用的两个对象就是 Compiler 和 Compilation，它们是 Plugin 和 Webpack 之间的桥梁。 Compiler 和 Compilation 的含义如下：
 
 * Compiler 对象包含了 Webpack 环境所有的的配置信息，包含 options，loaders，plugins 这些信息，这个对象在 Webpack 启动时候被实例化，它是全局唯一的，可以简单地把它理解为 Webpack 实例；
-* Compilation 对象包含了当前的模块资源、编译生成资源、变化的文件等。当 Webpack 以开发模式运行时，每当检测到一个文件变化，一次新的 Compilation 将被创建。Compilation 对象也提供了很多事件回调供插件做扩展。通过 Compilation 也能读取到 Compiler 对象。
+* Compilation 对象包含了当前的模块资源、编译生成资源、变化的文件等。当 Webpack 以开发模式运行时，每当检测到一个文件变化，一次新的 Compilation 将被创建。Compilation 对象也提供了很多事件回调供插件做扩展。通过 Compilation 也能读取到 Compiler 对象
 
 Compiler 和 Compilation 的区别在于：Compiler 代表了整个 Webpack 从启动到关闭的生命周期，而 Compilation 只是代表了一次新的编译。
-{.description}
 <!-- <slide youtube=".dark id='_m67JbGjWnc' autoplay loop"> -->
