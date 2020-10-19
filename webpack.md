@@ -185,3 +185,6 @@ By fy.li {.text-intro}
 
 Compiler 和 Compilation 的区别在于：Compiler 代表了整个 Webpack 从启动到关闭的生命周期，而 Compilation 只是代表了一次新的编译。
 <!-- <slide youtube=".dark id='_m67JbGjWnc' autoplay loop"> -->
+
+<slide class="bg-black-blue aligncenter" image="https://i.loli.net/2020/10/19/LxuGP9wqhTMyFBZ.jpg bg-black-blue" >  
+## **荣耀剑下取，均衡乱中求**
