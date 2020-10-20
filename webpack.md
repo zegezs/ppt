@@ -186,5 +186,11 @@ By fy.li {.text-intro}
 Compiler 和 Compilation 的区别在于：Compiler 代表了整个 Webpack 从启动到关闭的生命周期，而 Compilation 只是代表了一次新的编译。
 <!-- <slide youtube=".dark id='_m67JbGjWnc' autoplay loop"> -->
 
-<slide class="bg-black-blue aligncenter" image="https://i.loli.net/2020/10/19/LxuGP9wqhTMyFBZ.jpg bg-black-blue" >  
+<slide class="bg-black-blue aligncenter" image="https://i.loli.net/2020/10/19/LxuGP9wqhTMyFBZ.jpg .dark" >  
 ## **荣耀剑下取，均衡乱中求**
+
+「用可接受的服务器性能压力增加来换取更好的用户体验。」
+
+源代码直接上线：虽然过程可控，但是http请求多，性能开销大。
+
+打包成唯一脚本：一把梭完自己爽，服务器压力小，但是页面空白期长，用户体验不好。
